@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
             Kaligotla Sri Datta Sai Vithal
           </h2>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold leading-[1.05] md:leading-[0.95] tracking-tight text-white">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold leading-[1.05] md:leading-[0.95] tracking-tight text-white">
             Creative <br />
             Developer <br />
             <span className="text-gray-500">& Learner</span>
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
            initial={{ opacity: 0, scale: 0.98 }}
            animate={{ opacity: 1, scale: 1 }}
            transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-           className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative w-full aspect-square sm:aspect-auto sm:h-[350px] md:h-[500px] lg:h-[650px] xl:h-[750px] rounded-xl sm:rounded-2xl md:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden bg-brand-card border border-white/5 shadow-2xl"
+           className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative w-full aspect-video sm:aspect-auto sm:h-[280px] md:h-[380px] lg:h-[480px] xl:h-[560px] rounded-xl sm:rounded-2xl md:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden bg-brand-card border border-white/5 shadow-2xl"
         >
           {/* Placeholder image for LQIP (Low Quality Image Placeholder) effect */}
           {!imgLoaded && (
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
             <img 
               src="/images/profile-1200w.jpg"
               alt="Kaligotla Sri Datta Sai Vithal" 
-              className={`w-full h-full object-cover object-center sm:object-top transition-all duration-[1.5s] grayscale hover:grayscale-0 hover:scale-[1.02] ${
+              className={`w-full h-full object-contain object-center transition-all duration-[1.5s] grayscale hover:grayscale-0 hover:scale-[1.01] ${
                 imgLoaded ? 'opacity-90 hover:opacity-100' : 'opacity-0'
               }`}
               loading="eager"

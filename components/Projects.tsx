@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 pb-20">
           {PROJECTS.map((project, index) => (
             <motion.a
               key={project.id}
@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
               whileHover={{ y: -10 }}
               className="group cursor-pointer flex flex-col h-full"
             >
-              <div className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] aspect-[4/3] mb-8 bg-gray-100 shadow-lg border border-black/5">
+              <div className="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/3] mb-6 bg-gray-100 shadow-lg border border-black/5">
                  <img 
                     src={project.image} 
                     alt={project.title}
@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
               
               <div className="flex justify-between items-start gap-6 flex-grow">
                 <div className="flex flex-col gap-4">
-                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold group-hover:text-brand-blue transition-colors leading-tight text-black">
+                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold group-hover:text-brand-blue transition-colors leading-tight text-black">
                      {project.title}
                    </h3>
                    <div className="flex flex-wrap gap-2 md:gap-3 mb-2">
@@ -64,7 +64,7 @@ const Projects: React.FC = () => {
                        </span>
                      ))}
                    </div>
-                   <p className="text-lg md:text-xl text-gray-600 font-sans font-normal leading-relaxed">
+                   <p className="text-base md:text-lg text-gray-600 font-sans font-normal leading-relaxed">
                      {project.description}
                    </p>
                 </div>
