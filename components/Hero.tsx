@@ -31,30 +31,54 @@ const Hero: React.FC = () => {
           </h1>
         </motion.div>
 
-        {/* Hero Image / User Picture - Fully Responsive */}
+        {/* Hero Image / User Picture - Fully Responsive with optimized srcset */}
         <motion.div 
            initial={{ opacity: 0, scale: 0.98 }}
            animate={{ opacity: 1, scale: 1 }}
            transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
            className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative w-full aspect-square sm:aspect-auto sm:h-[350px] md:h-[500px] lg:h-[650px] xl:h-[750px] rounded-xl sm:rounded-2xl md:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden bg-brand-card border border-white/5 shadow-2xl"
         >
-          {/* Profile Image from public folder - Responsive */}
-          <img 
-            src="/DB.png"
-            alt="Kaligotla Sri Datta Sai Vithal" 
-            className={`w-full h-full object-cover object-center sm:object-top transition-all duration-[1.5s] grayscale hover:grayscale-0 hover:scale-[1.02] ${
-              imgLoaded ? 'opacity-90 hover:opacity-100' : 'opacity-0'
-            }`}
-            loading="eager"
-            decoding="async"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 80vw"
-            onLoad={() => setImgLoaded(true)}
-            onError={(e) => { 
-              e.currentTarget.onerror = null; 
-              e.currentTarget.src = 'https://ui-avatars.com/api/?name=Kaligotla+Sri+Datta+Sai+Vithal&background=222&color=fff&size=512';
-              setImgLoaded(true);
-            }}
-          />
+          {/* Placeholder image for LQIP (Low Quality Image Placeholder) effect */}
+          {!imgLoaded && (
+            <img 
+              src="/images/profile-placeholder.jpg"
+              alt="" 
+              className="absolute inset-0 w-full h-full object-cover blur-sm"
+              aria-hidden="true"
+            />
+          )}
+          
+          {/* Profile Image - Responsive picture element with WebP and JPEG variants */}
+          <picture>
+            {/* WebP variants for modern browsers */}
+            <source
+              srcSet="/images/profile-480w.webp 480w, /images/profile-768w.webp 768w, /images/profile-1200w.webp 1200w"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 80vw"
+              type="image/webp"
+            />
+            {/* JPEG fallback for older browsers */}
+            <source
+              srcSet="/images/profile-480w.jpg 480w, /images/profile-768w.jpg 768w, /images/profile-1200w.jpg 1200w"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 80vw"
+              type="image/jpeg"
+            />
+            {/* Fallback img tag */}
+            <img 
+              src="/images/profile-1200w.jpg"
+              alt="Kaligotla Sri Datta Sai Vithal" 
+              className={`w-full h-full object-cover object-center sm:object-top transition-all duration-[1.5s] grayscale hover:grayscale-0 hover:scale-[1.02] ${
+                imgLoaded ? 'opacity-90 hover:opacity-100' : 'opacity-0'
+              }`}
+              loading="eager"
+              decoding="async"
+              onLoad={() => setImgLoaded(true)}
+              onError={(e) => { 
+                e.currentTarget.onerror = null; 
+                e.currentTarget.src = 'https://ui-avatars.com/api/?name=Kaligotla+Sri+Datta+Sai+Vithal&background=222&color=fff&size=512';
+                setImgLoaded(true);
+              }}
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-60" />
         </motion.div>
       </div>
