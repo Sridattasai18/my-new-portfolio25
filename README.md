@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with **React 19**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. Optimized for performance and deployed on GitHub Pages.
 
-**Live Demo**: https://Sridattasai18.github.io/my-new-portfolio25
+**Live Demo**: [https://Sridattasai18.github.io/my-new-portfolio25](https://vithal-portfolio.vercel.app/)
 
 ---
 
