@@ -2,17 +2,8 @@ import React from 'react';
 import { NAV_ITEMS } from '../constants';
 
 const Navigation: React.FC = () => {
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, url: string | undefined, external: boolean | undefined) => {
-    if (external) return; 
-    if (!url) return;
-    
-    e.preventDefault();
-    const targetId = url.replace('#', '');
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // Native scrolling via CSS scroll-behavior: smooth handles this well
+  // and respects accessibility preferences.
 
   return (
     <div className="fixed bottom-6 left-0 right-0 z-[9999] flex justify-center pointer-events-none px-4">
@@ -24,17 +15,17 @@ const Navigation: React.FC = () => {
             href={item.external ? item.href : item.url}
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noreferrer" : undefined}
-            onClick={(e) => handleNavClick(e, item.url, item.external)}
+            // onClick removed to use native anchor behavior
             className="group relative flex items-center justify-center cursor-pointer min-w-[40px]"
             aria-label={item.label}
           >
-             {/* Icon container */}
+            {/* Icon container */}
             <div className={`p-2.5 rounded-xl transition-all duration-300 group-hover:bg-white/10 ${item.label === 'Resume' ? 'bg-white/5 border border-white/10' : ''}`}>
-               <item.icon 
-                 size={22} 
-                 className={`transition-all duration-300 ${item.external ? 'text-gray-300 group-hover:text-white' : 'text-gray-400 group-hover:text-brand-blue group-hover:scale-110'}`} 
-                 strokeWidth={1.5}
-               />
+              <item.icon
+                size={22}
+                className={`transition-all duration-300 ${item.external ? 'text-gray-300 group-hover:text-white' : 'text-gray-400 group-hover:text-brand-blue group-hover:scale-110'}`}
+                strokeWidth={1.5}
+              />
             </div>
 
             {/* Tooltip (Hidden on mobile for cleaner look) */}
@@ -42,14 +33,14 @@ const Navigation: React.FC = () => {
               {item.label}
               <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-white rotate-45"></div>
             </span>
-            
+
             {/* Active Indicator for Resume */}
-             {item.external && (
-                <span className="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-blue"></span>
-                </span>
-              )}
+            {item.external && (
+              <span className="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-blue"></span>
+              </span>
+            )}
           </a>
         ))}
       </nav>

@@ -8,11 +8,9 @@ export const PERSONAL_DETAILS = {
   email: "kaligotlasridattasai18@gmail.com",
   linkedin: "https://www.linkedin.com/in/kaligotla-sri-datta-sai-vithal-01bb2a321",
   github: "https://github.com/Sridattasai18",
-  about: `Hi, I’m Kaligotla Sri Datta Sai Vithal — a developer and designer who enjoys creating clean, modern, and meaningful digital experiences.
+  about: `Hi, I’m Kaligotla Sri Datta Sai Vithal — a developer and designer who enjoys creating clean and meaningful digital experiences. I love working on projects that balance good design with real functionality, whether it's building a web page, experimenting with AI, or refining a user interface.
 
-  I like working on projects that combine good design with practical functionality. Whether it’s building a web page, experimenting with AI, or improving a user interface, I enjoy the entire process of thinking, creating, and refining.
-
-  I’m someone who learns best by doing, trying out new ideas, and improving a little with each project. I enjoy exploring different areas of tech like web development, UI/UX, data analytics, and app design because they help me understand how ideas turn into real, usable products.`
+  I learn best by doing, trying out ideas, and improving a little with each project. I like exploring different areas of tech such as web development, UI/UX, data analytics, and app design because they help me understand how an idea becomes a usable product.`
 };
 
 export const EXPERIENCE: ExperienceItem[] = [
@@ -26,44 +24,44 @@ export const EXPERIENCE: ExperienceItem[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: 'agrivision',
-    title: "AgriVision",
-    year: "2025",
-    description: "A machine learning project that recommends suitable crops using soil and weather data. I trained the model, built the Flask backend, and connected everything to a simple web interface. The idea was to bring AI closer to agriculture.",
-    tech: ["Python", "Flask", "ML", "HTML/CSS"],
-    // Smart farming / Technology in agriculture
-    image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=1600&auto=format&fit=crop",
-    link: "https://github.com/Sridattasai18?tab=repositories"
-  },
-  {
-    id: 'cinemate',
-    title: "CineMate",
-    year: "2025",
-    description: "A full-stack movie tracker where users can save films, mark what they’ve watched, and keep everything organized. I worked on Firebase authentication, the Firestore database, and the entire frontend.",
-    tech: ["JavaScript", "Firebase", "HTML/CSS"],
-    // Movie collage / Netflix-style library background
-    image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1600&auto=format&fit=crop",
-    link: "https://github.com/Sridattasai18?tab=repositories"
-  },
-  {
     id: 'superstore',
     title: "Superstore Analytics",
     year: "2025",
     description: "A project exploring sales data to understand trends, profits, and customer behavior. I used Python, Pandas, and Tableau to clean the data and build dashboards that present insights clearly.",
     tech: ["Python", "Pandas", "Tableau"],
     // Data Visualization / Dashboard / Line Charts
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
-    link: "https://github.com/Sridattasai18?tab=repositories"
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    link: "https://github.com/Sridattasai18/A-College-Food-Choices-Case-Study-using-tableau-main"
+  },
+  {
+    id: 'cinemate',
+    title: "Cine Mate",
+    year: "2025",
+    description: "A full-stack movie tracker where users can save films, mark what they’ve watched, and keep everything organized. I worked on Firebase authentication, the Firestore database, and the entire frontend.",
+    tech: ["JavaScript", "Firebase", "HTML/CSS"],
+    // Movie collage / Netflix-style library background
+    image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=800&auto=format&fit=crop",
+    link: "https://github.com/Sridattasai18/cine-mate-project-401"
+  },
+  {
+    id: 'agrivision',
+    title: "Agri Vision",
+    year: "2025",
+    description: "A machine learning project that recommends suitable crops using soil and weather data. I trained the model, built the Flask backend, and connected everything to a simple web interface. The idea was to bring AI closer to agriculture.",
+    tech: ["Python", "Flask", "ML", "HTML/CSS"],
+    // Smart farming / Technology in agriculture
+    image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=800&auto=format&fit=crop",
+    link: "https://github.com/Sridattasai18/Agri-Vision"
   },
   {
     id: 'portfolio',
     title: "Personal Portfolio",
-    year: "2024",
-    description: "My first real attempt at building a personal portfolio using HTML, CSS, and JavaScript. It was a playground to learn responsive design and basic DOM manipulation.",
-    tech: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    description: "My personal portfolio built to showcase my skills and projects. Designed with a clean, modern aesthetic and built for performance.",
+    tech: ["React", "Tailwind HTML", "TypeScript"],
     // Clean UI Design / Portfolio Style
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1600&auto=format&fit=crop",
-    link: "https://github.com/Sridattasai18?tab=repositories"
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
+    link: "https://github.com/Sridattasai18/my-new-portfolio25"
   }
 ];
 
@@ -143,13 +141,13 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', url: '#home', icon: Home },
-  { label: 'Skills', url: '#skills', icon: Terminal }, 
+  { label: 'Skills', url: '#skills', icon: Terminal },
   { label: 'Projects', url: '#projects', icon: FolderGit2 },
-  { 
-    label: 'Resume', 
-    href: 'https://drive.google.com/file/d/1jnOIP-LfP7_8F0unLuh2BQ4QPh__deqx/view?usp=sharing', 
-    icon: FileText, 
-    external: true 
+  {
+    label: 'Resume',
+    href: 'https://drive.google.com/file/d/1jnOIP-LfP7_8F0unLuh2BQ4QPh__deqx/view?usp=sharing',
+    icon: FileText,
+    external: true
   },
   { label: 'Contact', url: '#contact', icon: Mail }
 ];
